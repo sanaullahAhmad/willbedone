@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>LAPS  |  Laboratory Activity Procedures System</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="dist/css/bootstrap.css" rel="stylesheet"/>
+
+        <!-- Boostrap Theme -->
+        <link id="skinCss" href="css/theme-base.css" rel="stylesheet"/>
+        <link href="css/boostrap-overrides.css" rel="stylesheet"/>
+        <link id="themeCss" href="css/theme.css" rel="stylesheet"/>
+
+        <!-- Add custom CSS here -->
+        <link href="assets/css/sidebar.css" rel="stylesheet"/>
+
+        <!-- Plugins -->
+        <link href="assets/css/font-awesome.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="assets/css/ezmark.css"/>
+        <link href="assets/plugins/morris.js-0.4.3/morris.css" rel="stylesheet">
+        <link href="assets/css/animate-custom.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="assets/plugins/calendar/zabuto_calendar.css">
+        <link rel="stylesheet" type="text/css" href="assets/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart.css">
+        <link href="assets/css/pushy.css" rel="stylesheet"/>
+        <link href="assets/css/panel.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="assets/weather-icons/weather-icons.css">
+        <link href="assets/select/select2.css" rel="stylesheet"/>
+        <link rel="stylesheet" media="screen" type="text/css" href="colorPicker/colpick/css/colpick.css" />
+
+    </head>
+    <body >
+
+        <!-- preloader -->
+        <div class='preloader-wrapper'>
+            <div class="preloader">
+                <img src="img/preloader.png" alt='loading image'/>
+            </div>
+        </div><!-- / preloader -->
+        <!-- Container that wraps all content that gets "pushed" when chat panel shows-->
+        <div id="container"> 
+            <!-- Top Navbar  -->
+            <div class="navbar navbar-static-top navbar-inverse " role="navigation">
+                <div class="navbar-header navbar-inverse text-center">
+                    <button type="button" class="navbar-toggle border-left-med no-radius" id="menu-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <button type="button" class="navbar-toggle border-left-med no-radius" id="user-menu" data-toggle="collapse" >
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="avatar text-inverse">Welcome Ryan!</span>
+                    </button>
+                    <!-- logo -->
+                    <div class="navbar-brand"><a href="index.html"> <img src="img/logo.png" alt="logo"></a></div>
+                    <!-- / logo -->
+                </div>
+                <!-- user -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+                    <ul class="nav navbar-nav navbar-right navbar-user">
+                        <!-- new messages -->
+                        <li class="dropdown messages-dropdown">
+                            <a href="#" class="dropdown-toggle announcements" data-toggle="dropdown"><i class="icon-envelope-alt"></i><span class="badge">23</span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header header-inverse"><i class="icon-envelope"></i>23 New Messages</li>
+                                <li class="message-preview">
+                                    <a href="#">
+                                        <img src="img/tn_user_02.jpg" alt="User" class="img-circle user-thumbnail-xs">
+                                        <span class="name pull-left">Maya Smith</span>
+                                        <span class="label label-primary pull-right">Just Now</span><br>
+                                        <span class="message text-transparent">Hi Ryan, I received a message from quis...</span>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="message-preview">
+                                    <a href="#">
+                                        <img src="img/tn_user_01.jpg" alt="User" class="img-circle user-thumbnail-xs">
+                                        <span class="name pull-left">James Doe</span>
+                                        <span class="time pull-right text-transparent"><i class="icon-time"></i> 4:34 PM</span><br>
+                                        <span class="message text-transparent">Good Afternoon Ryan, Were you able to...</span>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="message-preview">
+                                    <a href="#">
+                                        <img src="img/tn_user_04.jpg" alt="User" class="img-circle user-thumbnail-xs">
+                                        <span class="name pull-left">Benjamin Taylor</span>
+                                        <span class="time pull-right text-transparent"><i class="icon-time"></i> 1:56 PM</span><br>
+                                        <span class="message text-transparent">Hey, Can you give me a call when you get a...</span>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="dropdown-footer text-center">
+                                    <a href="#">
+                                        See all new messages
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- alerts -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle announcements" data-toggle="dropdown">
+                                <i class="icon-flag-alt"></i><span class="badge animated-delay flash">12</span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header header-inverse"><i class="icon-star"></i>12 Notifications </li>
+                                <li class="notification">
+                                    <a href="#">
+                                        <span class="pull-left"><span class="label label-success"><i class="icon-comment"></i></span>  New Comment</span>
+                                        <span class="time pull-right text-transparent">Just Now</span><br>
+                                    </a>
+                                </li>
+                                <li class="notification">
+                                    <a href="#">
+                                        <span class="pull-left"><span class="label label-success"><i class="icon-comment"></i></span>  New Comment</span>
+                                        <span class="time pull-right text-transparent">5 Minutes Ago</span><br>
+                                    </a>
+                                </li>
+                                <li class="notification">
+                                    <a href="#">
+                                        <span class="pull-left"><span class="label label-primary"><i class="icon-user"></i></span>  12 New Users</span>
+                                        <span class="time pull-right text-transparent">23 Minutes ago</span><br>
+                                    </a>
+                                </li>
+                                <li class="notification">
+                                    <a href="#">
+                                        <span class="pull-left"><span class="label label-danger"><i class="icon-flag"></i></span>  Canceled Transaction</span>
+                                        <span class="time pull-right text-transparent">12 Hours Ago</span><br>
+                                    </a>
+                                </li>
+                                <li class="notification">
+                                    <a href="#">
+                                        <span class="pull-left"><span class="label label-warning"><i class="icon-shopping-cart"></i></span>  Canceled Transaction</span>
+                                        <span class="time pull-right text-transparent">Yesterday</span><br>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="dropdown-footer text-center">
+                                    <a href="#">
+                                        See all notifications
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown alerts-dropdown">
+                            <a href="#" class="dropdown-toggle announcements" data-toggle="dropdown"><i class="icon-bar-chart"></i><span class="badge">56</span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header header-inverse"><i class="icon-bar-chart"></i>6 Pending Tasks </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="task">
+                                            <span class="desc">November orders </span>
+                                        </span>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="task">
+                                            <span class="desc">Invoices paid</span>
+                                        </span>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="task">
+                                            <span class="desc">Updates</span>
+                                        </span>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar progress-bar-warning"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:35%">
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <span class="task">
+                                            <span class="desc">Unread emails</span>
+                                        </span>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar progress-bar-danger"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:15%">
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="dropdown-footer text-center">
+                                    <a href="#">
+                                        See all tasks
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                        </li>
+                        <li class="avatar dropdown user-dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome Ryan!<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="user-profile.html"><i class="icon-user"></i> Profile</a></li>
+                                <li><a href="email.html"><i class="icon-envelope"></i> Inbox</a></li>
+                                <li><a href="#"><i class="icon-gear"></i> Settings</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login.html"><i class="icon-power-off"></i> Log Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- / nav-collapse -->
+            </div>
+
+            <!-- / top Navbar -->
+            <!-- Wrapper for content below nav bar -->
+            <div id="wrapper">
+                <!-- Sidebar -->
+                <div class="sidebar-back"></div>
+                <div id="sidebar-wrapper" class="stretch-full-height">
+                    <ul class="sidebar-nav">
+                        <li id="dashboard">
+                            <a href="index.html" >
+                                <span class="nav-icon"><i class="icon-dashboard icon-2x"></i></span>
+                                <span class="sidebar-menu-item-text">Dashboard</span></a>            
+                        </li>
+                        <li class="nav-header" id="layout"> 
+                            <a href="#" >
+                                <span class="nav-icon"><i class="icon-folder-open icon-2x"></i></span>
+                                <span class="sidebar-menu-item-text">Products</span>
+                                <i class="icon-chevron-down pull-right"></i>
+                            </a>
+                            <ul class="nav nav-list collapse submenu" id="layouts">
+                                <li><a href="processrequest.html" class="active-title">New Clinical Trial Request</a></li>
+                                <li><a href="infusionrequest.html">New Infusion Request</a></li>
+                                <li><a href="search.html">Search</a></li> 
+                            </ul>
+                        </li>
+                        <li class="nav-header" id="uiMenu"> 
+                            <a href="#">
+                                <span class="nav-icon"><i class="icon-tablet icon-2x"></i></span>
+                                <span class="sidebar-menu-item-text">Pending SOPs</span>
+                                <i class="icon-chevron-down pull-right"></i>
+                            </a>
+                            <ul class="nav nav-list collapse submenu" id="uiMenus">
+                                <li><a href="sop2-0-3.html">SOP CMP 2.0.30</a></li>
+                                <li><a href="sop-2-0-10.html">SOP CMP 2.0.10</a></li>
+                                <li><a href="sop-2-11.html">SOP CMP 2.0.11</a></li>
+                                <li><a href="sop-7-0.html">SOP CMP 7.00</a></li>
+                                <li><a href="sop-5-0-3.html">SOP CMP 5.0.3</a></li>
+                                <li><a href="sop-5-0-3.html">SOP CMP 2.0.30</a></li>
+                                <li><a href="sop-5-0-3-2.html">SOP CMP 2.0.30</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-header" id="page"> 
+                            <a href="#">
+                                <span class="nav-icon"><i class="icon-copy icon-2x"></i></span>
+                                <span class="sidebar-menu-item-text">Reports</span>
+                                <i class="icon-chevron-down pull-right"></i>
+                            </a>
+                            <ul class="nav nav-list collapse submenu" id="uiMenus">
+                                <li><a href="report.html">Create New Report</a></li>
+                                <li><a href="search-report.html">Search</a></li>
+
+                            </ul>
+
+                        </li>
+                        <li class="nav-header" id="table"> 
+                            <a href="#">
+                                <span class="nav-icon"><i class="icon-table icon-2x"></i></span>
+                                <span class="sidebar-menu-item-text">Search</span>
+                                <i class="icon-chevron-down pull-right"></i>
+                            </a>
+                            <ul class="nav nav-list collapse submenu" id="tables">
+                                <li><a href="search.html">Basic</a></li>
+                                <li><a href="advanced-search.html">Advanced</a></li>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </div><!-- /sidebar -->
+
+                <!-- Keep all page content within the page-content-wrapper -->
+                <div id="page-content-wrapper" class="stretch-full-height animated-med-delay fadeInRight">
+                    <!-- page content header -->
+                    <div class="row">
+
+                        <form class="form-signin">
+                            <h1 class="text-center ">CLINICAL TRIAL PRODUCT</h1>
+                            <h2 class="text-center text-primary">Request for Processing of Mesenchymal Stem Cell</h2> 
+                            <h3 class="text-danger text-center"> SECTION 1 TO 6 OF THIS FORM MUST BE COMPLETED BY CLINICAL COORDINATOR TEAM</h3>
+                            <br>
+                            <div class="col-md-12 no-padding">
+                                <div class="panel panel-gray-solid panel-body-only animated-med-delay fadeInUp downarrowdiv">
+                                    <div class="panel-heading">
+                                        <div class="tools pull-right">
+                                            <a href="#" class="close-panel" data-dismiss="panel" aria-hidden="true"><i class="icon-remove text-transparent"></i></a>                      	</div>
+                                    </div>
+                                    <div id="announcement" class="panel-body no-padding-top">
+                                        <h2 class="text-center ">1. DONOR INFORMATION</h2>
+                                        <div class="add-arrow-down-left animated-med-delay fadeInUp"></div>
+                                    </div>
+
+                                </div>
+
+                            </div><!-- DONOR INFORMATION -->
+                            <div class="row">
+                                <div class="col-md-6  border-right-light">
+                                    <!-- Name -->
+                                    <div class="col-xs-12">
+
+                                        <div class="input-group ">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button"><i class="icon-user text-transparent"></i></button>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="DONOR Full Name" required autofocus>
+                                        </div><!-- /input-group -->
+
+                                    </div><!-- / Name -->
+                                    <!-- Email -->
+                                    <div class="col-xs-12">
+                                        <div class="input-group col-md-8 no-padding-left">
+                                            <div class="col-xs-12 col-md-2">
+                                            <label class="btn" >
+                                             DOB
+                                            </label></div>
+                                            <div class="col-xs-12 col-md-3">
+                                                <select class="form-control">
+                                                    <option value="Month">Month</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-12 col-md-3">
+                                                <select class="form-control">
+                                                    <option value="Day">Day</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4">
+                                                <select class="form-control">
+                                                    <option value="Year">Year</option>
+                                                </select>
+                                            </div>
+                                            
+                                        </div><!-- /input-group -->
+                                        <!-- input-group -->
+                                        <div class="input-group cold-md-4">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button"><i class="icon-truck text-transparent"></i></button>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="Weight Kg" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div><!-- / email -->
+                                    <!-- Password -->
+                                    <div class="col-xs-12 col-md-12 ">
+
+                                        <h4> This product is for the generation of :</h4>
+                                        <div class="input-group btn-group-lg" >
+                                            <label class="btn" >
+                                                <input type="checkbox" class="checkbox-inline"> Autologous
+                                            </label>
+                                            <label class="btn">
+                                                <input type="checkbox" class="checkbox-inline"> Allogeneic
+                                            </label>
+
+                                        </div>
+                                    </div><!-- / password -->
+                                </div>
+                                <div class="col-md-6  "> <!-- Birthday -->
+                                    <div class="row">
+                                        <div class="input-group padding-left ">
+                                            <input type="text" class="form-control" placeholder="DONOR ID# " required autofocus>
+                                        </div><!-- /input-group -->
+                                        <div class="input-group" >
+                                            <div class="col-xs-12 col-md-3">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline"> JMH
+                                                </label>
+                                            </div>
+                                            <div class="col-xs-12 col-md-3">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline"> UMH
+                                                </label>
+                                            </div>
+                                            <div class="col-xs-12 col-md-3">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline"> VA
+                                                </label>
+                                            </div>
+                                            <div class="col-xs-12 col-md-3">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline"> Other
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div><!-- / birthday -->
+                                    <div class="row">
+
+                                        <div class="col-xs-6 col-md-1">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline"> 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-11">
+                                            
+                                            <input type="text" class="form-control" placeholder="Industry Name" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div><!-- / birthday -->
+                                    <div class="row">
+
+                                        <div class="col-xs-6 col-md-1">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox"> 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-11">
+                                            
+                                            <input type="text" class="form-control" placeholder="Study #" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div><!-- DONOR INFORMATION FIELDS -->
+
+                            <div class="col-md-12 no-padding">
+                                <div class="panel panel-gray-solid panel-body-only animated-med-delay fadeInUp downarrowdiv">
+                                    <div class="panel-heading">
+                                        <div class="tools pull-right">
+                                            <a href="#" class="close-panel" data-dismiss="panel" aria-hidden="true"><i class="icon-remove text-transparent"></i></a>                      	</div>
+                                    </div>
+                                    <div id="announcement" class="panel-body no-padding-top">
+                                        <h2 class="text-center ">2. TESTING OF RELEVANT COMMUNICABLE DISEASES</h2>
+                                        <div class="add-arrow-down-left animated-med-delay fadeInUp"></div>
+                                    </div>
+
+                                </div>
+
+                            </div> <!-- TESTING OF RELEVANT COMMUNICABLE DISEASES -->
+                            <div class="row">
+                               <div class="col-xs-6 col-md-4">
+
+                                        <div class="col-xs-6 col-md-4">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox">HBsAg 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-8">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-6 col-md-4">
+
+                                        <div class="col-xs-6 col-md-4">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox">HTLV I/II   
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-8">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-6 col-md-4">
+
+                                        <div class="col-xs-6 col-md-4">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox">Treponema <br/>
+                                                    Pallidum  
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-8">
+                                            
+                                            <input type="text" class="form-control" placeholder="(RPR--syphilis):" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-6 col-md-4">
+
+                                        <div class="col-xs-6 col-md-4">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox">HBcAb  
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-8">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-6 col-md-4">
+
+                                        <div class="col-xs-6 col-md-4">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox">HIV 1/2   
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-8">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-6 col-md-4">
+
+                                        <div class="col-xs-6 col-md-4">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox">VDRL 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-8">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-6 col-md-4">
+
+                                        <div class="col-xs-6 col-md-4">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox">HCV 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-8">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-6 col-md-4">
+
+                                        <div class="col-xs-6 col-md-4">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox">CMV 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-8">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-6 col-md-4">
+
+                                        <div class="col-xs-6 col-md-4">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox">Other 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-8">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-6 col-md-4">
+
+                                        <div class="col-xs-6 col-md-4">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox">WNV  
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-8">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                
+                                
+                            </div> <!-- / Tests -->
+                            
+                            <div class="col-md-12 no-padding">
+                                <div class="panel panel-gray-solid panel-body-only animated-med-delay fadeInUp downarrowdiv">
+                                    <div class="panel-heading">
+                                        <div class="tools pull-right">
+                                            <a href="#" class="close-panel" data-dismiss="panel" aria-hidden="true"><i class="icon-remove text-transparent"></i></a>                      	</div>
+                                    </div>
+                                    <div id="announcement" class="panel-body no-padding-top">
+                                        <h2 class="text-center ">3. DONOR ELIGIBILITY DETERMINATION</h2>
+                                        <div class="add-arrow-down-left animated-med-delay fadeInUp"></div>
+                                    </div>
+
+                                </div>
+
+                            </div> <!-- DONOR ELIGIBILITY DETERMINATION -->
+                            <div class="row">
+                               
+                                <div class="col-xs-12 col-md-12">
+
+                                        <div class="col-xs-6 col-md-10">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox"> Check if all infectious disease markers are negative 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-2">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-12 col-md-12">
+
+                                        <div class="col-xs-6 col-md-10">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox"> Confirm CMV status of the IND:  Negative only     Negative or Positive 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-2">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-12 col-md-12">
+
+                                        <div class="col-xs-6 col-md-10">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox"> Attach copies of infectious disease test results (check when attached)
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-2">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-12 col-md-12">
+
+                                        <div class="col-xs-6 col-md-10">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox"> Attach donor’s medical history (check when attached) 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-2">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-12 col-md-12">
+
+                                        <div class="col-xs-6 col-md-10">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox"> Attach donor’s social history (check when attached) 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-2">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-12 col-md-12">
+
+                                        <div class="col-xs-6 col-md-10">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox"> Attach donor eligibility questionnaire (check when attached)
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-2">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-12 col-md-12">
+
+                                        <div class="col-xs-6 col-md-10">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox"> Attach results of donor’s physical examination (check when attached) 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-2">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-12 col-md-12">
+
+                                        <div class="col-xs-6 col-md-10">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox"> Attach donor’s consent (check when attached)
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-2">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                <div class="col-xs-12 col-md-12">
+
+                                        <div class="col-xs-6 col-md-10">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox"> In case of female donor, pregnancy test results (attached a copy of test results) 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-2">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                
+                                
+                                
+                            </div> <!-- DONOR ELIGIBILITY DETERMINATION  -->
+                           
+
+                            <div class="col-md-12 no-padding">
+                                <div class="panel panel-gray-solid panel-body-only animated-med-delay fadeInUp downarrowdiv">
+                                    <div class="panel-heading">
+                                        <div class="tools pull-right">
+                                            <a href="#" class="close-panel" data-dismiss="panel" aria-hidden="true"><i class="icon-remove text-transparent"></i></a>                      	</div>
+                                    </div>
+                                    <div id="announcement" class="panel-body no-padding-top">
+                                        <h2 class="text-center ">4. REQUEST FOR PROCESSING</h2>
+                                        <div class="add-arrow-down-left animated-med-delay fadeInUp"></div>
+                                    </div>
+
+                                </div>
+
+                            </div> <!-- 4. REQUEST FOR PROCESSING -->
+                            <div class="row">
+                                <div class="col-md-6  border-right-light">
+                                    <H3>Product Type (Check one)</H3>    
+                                    <div class="col-xs-12 col-md-12 ">
+                                        
+                                        <label class="btn btn-lg" >
+                                                <input type="checkbox" class="checkbox-inline"> Bone Marrow Aspirate (Iliac Crest): 
+                                            </label>
+                                        <div class="input-group btn-group-lg padding-left" >
+                                            <label class="btn padding-left" >
+                                                <input type="checkbox" class="checkbox-inline"> Filtered
+                                            </label>
+                                            <label class="btn">
+                                                <input type="checkbox" class="checkbox-inline"> Un filtered
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-xs-6 col-md-6">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox"> Anticipated date of processing 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-6">
+                                            
+                                            <input type="text" class="form-control" placeholder="Anticipated date of processing " required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-xs-6 col-md-6">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox"> Anticipated date of processing 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-6">
+                                            
+                                            <input type="text" class="form-control" placeholder="Anticipated date of processing " required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6  "> 
+                                    
+                                    <h3>Processing Request (check all that apply)</h3>
+                                    <div class="row">
+                                        
+                                        <div class="input-group" >
+                                            <div class="col-xs-12 col-md-12">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline"> Mononuclear cell enrichment
+                                                </label>
+                                            </div>
+                                            <div class="col-xs-12 col-md-112">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline"> MSC Culture & Expansion
+                                                </label>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                    </div><!-- / birthday -->
+                                    <div class="row">
+
+                                        <div class="col-xs-6 col-md-2">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline">Others
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-10">
+                                            
+                                            <input type="text" class="form-control" placeholder="" required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div><!-- / birthday -->
+                                    <div class="row">
+
+                                        <div class="col-xs-6 col-md-6">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox"> Anticipated date of processing 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-6">
+                                            
+                                            <input type="text" class="form-control" placeholder="Anticipated date of processing " required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div><!-- 4. REQUEST FOR PROCESSING FIELDS -->
+                         
+                            <div class="col-md-12 no-padding">
+                                <div class="panel panel-gray-solid panel-body-only animated-med-delay fadeInUp downarrowdiv">
+                                    <div class="panel-heading">
+                                        <div class="tools pull-right">
+                                            <a href="#" class="close-panel" data-dismiss="panel" aria-hidden="true"><i class="icon-remove text-transparent"></i></a>                      	</div>
+                                    </div>
+                                    <div id="announcement" class="panel-body no-padding-top">
+                                        <h2 class="text-center ">5. LENGTH OF STORAGE</h2>
+                                        <div class="add-arrow-down-left animated-med-delay fadeInUp"></div>
+                                    </div>
+
+                                </div>
+
+                            </div> <!-- 5. LENGTH OF STORAGE -->
+                            <div class="row">
+                                <H3>Product Type (Check one)</H3>    
+                                    <div class="col-xs-12 col-md-12 ">
+                                        
+                                        <label class="btn btn-lg" >
+                                                <input type="checkbox" class="checkbox-inline"> Bone Marrow Aspirate (Iliac Crest): 
+                                            </label>
+                                        <div class="input-group btn-group-lg padding-left" >
+                                            <label class="btn padding-left" >
+                                                <input type="checkbox" class="checkbox-inline"> Filtered
+                                            </label>
+                                            <label class="btn">
+                                                <input type="checkbox" class="checkbox-inline"> Un filtered
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-xs-6 col-md-6">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox"> Anticipated date of processing 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-6">
+                                            
+                                            <input type="text" class="form-control" placeholder="Anticipated date of processing " required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-xs-6 col-md-6">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox"> Anticipated date of processing 
+                                                </label>
+                                            </div>
+                                        <div class="input-group col-xs-6 col-md-6">
+                                            
+                                            <input type="text" class="form-control" placeholder="Anticipated date of processing " required autofocus>
+                                        </div><!-- /input-group -->
+                                    </div>
+                            </div><!-- 5. LENGTH OF STORAGE -->
+
+                            <div class="col-md-12 no-padding">
+                                <div class="panel panel-gray-solid panel-body-only animated-med-delay fadeInUp downarrowdiv">
+                                    <div class="panel-heading">
+                                        <div class="tools pull-right">
+                                            <a href="#" class="close-panel" data-dismiss="panel" aria-hidden="true"><i class="icon-remove text-transparent"></i></a>                      	</div>
+                                    </div>
+                                    <div id="announcement" class="panel-body no-padding-top">
+                                        <h2 class="text-center ">6. DONOR ELIGIBILITY CONFIRMATION</h2>
+                                        <div class="add-arrow-down-left animated-med-delay fadeInUp"></div>
+                                    </div>
+
+                                </div>
+
+                            </div><!-- 5. LENGTH OF STORAGE -->
+                            <div class="row">
+                                <p>Based on the results of screening, testing, and specific IND’s inclusion-exclusion criteria, the donor is determined to be
+                                </p>
+<div class="row">
+                                                <label class="btn btn-lg" >
+                                                    <input type="checkbox" class="checkbox-inline checkbox"> Eligible
+                                                </label>
+                                            </div>
+                                <div class="row text-center italic">
+This is to certify that (1) this donor eligibility determination has been made in accordance with current federal regulations and (2) infectious disease testing was performed by a laboratory certified to perform such testing on human specimens under the CLIA or that has met equivalent requirements as determined by CMS.
+                                </div>
+                                <br/>
+                                <div class="input-group">
+                                           <label class="btn btn-lg" >
+                                                     Requesting Physician
+                                                </label> 
+                                            <input type="text" class="form-control" placeholder="Requesting Physician " required autofocus>
+                                        </div><!-- /input-group -->
+                                        <div class="input-group ">
+                                            
+                                            <input type="checkbox" class="form-control"  required autofocus>Requesting Physician signed
+                                        </div><!-- /input-group -->
+                            </div><!-- 5. LENGTH OF STORAGE -->
+                            
+                            
+                            <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                                <button class="btn btn-lg btn-primary btn-block" type="submit">
+                                    Submit for review
+                                </button>
+                            </div>
+                            </div>
+                            
+                        </form>
+                        <div class="clearfix"></div>
+                    </div>
+                    <br>
+                    <a href="#" class="text-center new-account text-transparent">Need help?</a>
+
+
+
+
+
+                </div><!-- /page-content-wrapper -->
+
+            </div><!-- / wrapper for content below nav bar -->
+        </div><!-- end container for chat panel push-->
+
+
+        <!-- JavaScript -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!-- Theme Core -->
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/chat.js"></script>
+        <script src="assets/js/modernizr-2.6.2.min.js"></script>
+
+        <script src="dist/js/bootstrap.js"></script>
+        <script type="text/javascript" src="assets/js/jquery-ui-1.10.4.custom.min.js"></script>
+
+        <!-- Pushy JS --> 
+        <script src="assets/js/pushy.js"></script>
+
+        <!-- Zabuto Calendar -->
+        <script src="assets/plugins/calendar/zabuto_calendar.js"></script>
+        <script type="application/javascript">
+            $(document).ready(function () {
+            $("#date-popover").popover({html: true, trigger: "manual"});
+            $("#date-popover").hide();
+            $("#date-popover").click(function (e) {
+            $(this).hide();
+            });
+
+            $("#my-calendar").zabuto_calendar({
+            action: function () {
+            return myDateFunction(this.id, false);
+            },
+            action_nav: function () {
+            return myNavFunction(this.id);
+            },
+            ajax: {
+            url: "show_data.php?action=1",
+            modal: true
+            },
+            legend: [
+            {type: "text", label: "Special event", badge: "00"},
+            {type: "block", label: "Regular event", }
+            ]
+            });
+            });
+
+            function myDateFunction(id, fromModal) {
+            $("#date-popover").hide();
+            if (fromModal) {
+            $("#" + id + "_modal").modal("hide");
+            }
+            var date = $("#" + id).data("date");
+            var hasEvent = $("#" + id).data("hasEvent");
+            if (hasEvent && !fromModal) {
+            return false;
+            }
+            $("#date-popover-content").html('You clicked on date ' + date);
+            $("#date-popover").show();
+            return true;
+            }
+
+            function myNavFunction(id) {
+            $("#date-popover").hide();
+            var nav = $("#" + id).data("navigation");
+            var to = $("#" + id).data("to");
+            console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
+            }
+        </script>
+        <!-- Sparkline -->
+        <script src="assets/js/jquery.sparkline.js"></script>
+
+        <!-- EzMark -->
+        <script src="assets/js/jquery.ezmark.js"></script>
+        <script src="assets/select/select2.js"></script>
+
+        <script type="text/javascript">
+$(function() {
+    $('.custom-check input').ezMark()
+});
+        </script>
+
+        <!-- Canvas.js-->
+        <script src="assets/plugins/canvas/canvasjs.min.js"></script>
+        <!-- ColorPicker -->
+        <script type="text/javascript" src="colorPicker/colpick/js/colpick.js"></script>
+        <script type="text/javascript" src="colorPicker/colpick/js/colpick-implem.js"></script>
+
+        <!-- Custom -->
+        <script src="assets/js/sidebar-navbar.js"></script>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/chart-data.js"></script>
+
+        <!-- Google Maps -->
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script type="text/javascript" src="assets/js/gmap3.js"></script>  
+        <script src="assets/js/gmap.custom-index-map.js"></script>
+
+        <!-- Font Awesome Markers -->
+        <script src="assets/plugins/fontawesome-markers-master/fontawesome-markers.js"></script>
+
+        <!-- Easy Pie Charts -->
+        <script type="text/javascript" src="assets/plugins/jquery-easy-pie-chart/examples/excanvas.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
+
+        <!-- Initialize Carousel-->
+        <script>$('.carousel').carousel({
+    interval: 7000
+})
+        </script>
+        <!-- Flot -->
+        <script type="text/javascript" src="assets/plugins/flot/jquery.flot.js"></script>
+        <script type="text/javascript" src="assets/plugins/flot/jquery.flot.resize.js"></script>
+
+    </body>
+</html>

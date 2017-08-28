@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>LAPS  |  Laboratory Activity Procedures System</title>
+
+<!-- Bootstrap core CSS -->
+<link href="dist/css/bootstrap.css" rel="stylesheet"/>
+
+<!-- Boostrap Theme -->
+<link id="skinCss" href="css/theme-base.css" rel="stylesheet"/>
+<link href="css/boostrap-overrides.css" rel="stylesheet"/>
+<link id="themeCss" href="css/theme.css" rel="stylesheet"/>
+
+<!-- Add custom CSS here -->
+<link href="assets/css/sidebar.css" rel="stylesheet"/>
+
+<!-- Plugins -->
+<link href="assets/css/font-awesome.css" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/ezmark.css"/>
+<link href="assets/plugins/morris.js-0.4.3/morris.css" rel="stylesheet">
+<link href="assets/css/animate-custom.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="assets/plugins/calendar/zabuto_calendar.css">
+<link rel="stylesheet" type="text/css" href="assets/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart.css">
+<link href="assets/css/pushy.css" rel="stylesheet"/>
+<link href="assets/css/panel.css" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/weather-icons/weather-icons.css">
+<link href="assets/select/select2.css" rel="stylesheet"/>
+<link href="assets/select/custom.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet"/>
+<link rel="stylesheet" media="screen" type="text/css" href="colorPicker/colpick/css/colpick.css" />
+</head>
+<body >
+
+
+<!-- preloader -->
+<div class='preloader-wrapper'>
+  <div class="preloader"> <img src="img/preloader.png" alt='loading image'/> </div>
+</div>
+<!-- / preloader --> 
+<!-- Container that wraps all content that gets "pushed" when chat panel shows-->
+<div id="container"> 
+  <!-- Top Navbar  -->
+  <div class="navbar navbar-static-top navbar-inverse " role="navigation">
+    <div class="navbar-header navbar-inverse text-center">
+      <button type="button" class="navbar-toggle border-left-med no-radius" id="menu-toggle"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <button type="button" class="navbar-toggle border-left-med no-radius" id="user-menu" data-toggle="collapse" > <span class="sr-only">Toggle navigation</span> <span class="avatar text-inverse">Welcome Ryan!</span> </button>
+      <!-- logo -->
+      <div class="navbar-brand"><a href="index.html"> <img src="img/logo.png" alt="logo"></a></div>
+      <!-- / logo --> 
+    </div>
+    <!-- user -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right navbar-user">
+        <!-- new messages -->
+        <li class="dropdown messages-dropdown"> <a href="#" class="dropdown-toggle announcements" data-toggle="dropdown"><i class="icon-envelope-alt"></i><span class="badge">23</span></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header header-inverse"><i class="icon-envelope"></i>23 New Messages</li>
+            <li class="message-preview"> <a href="#"> <img src="img/tn_user_02.jpg" alt="User" class="img-circle user-thumbnail-xs"> <span class="name pull-left">Maya Smith</span> <span class="label label-primary pull-right">Just Now</span><br>
+              <span class="message text-transparent">Hi Ryan, I received a message from quis...</span> </a> </li>
+            <li class="divider"></li>
+            <li class="message-preview"> <a href="#"> <img src="img/tn_user_01.jpg" alt="User" class="img-circle user-thumbnail-xs"> <span class="name pull-left">James Doe</span> <span class="time pull-right text-transparent"><i class="icon-time"></i> 4:34 PM</span><br>
+              <span class="message text-transparent">Good Afternoon Ryan, Were you able to...</span> </a> </li>
+            <li class="divider"></li>
+            <li class="message-preview"> <a href="#"> <img src="img/tn_user_04.jpg" alt="User" class="img-circle user-thumbnail-xs"> <span class="name pull-left">Benjamin Taylor</span> <span class="time pull-right text-transparent"><i class="icon-time"></i> 1:56 PM</span><br>
+              <span class="message text-transparent">Hey, Can you give me a call when you get a...</span> </a> </li>
+            <li class="divider"></li>
+            <li class="dropdown-footer text-center"> <a href="#"> See all new messages </a> </li>
+          </ul>
+        </li>
+        <!-- alerts -->
+        <li class="dropdown"> <a href="#" class="dropdown-toggle announcements" data-toggle="dropdown"> <i class="icon-flag-alt"></i><span class="badge animated-delay flash">12</span></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header header-inverse"><i class="icon-star"></i>12 Notifications </li>
+            <li class="notification"> <a href="#"> <span class="pull-left"><span class="label label-success"><i class="icon-comment"></i></span> New Comment</span> <span class="time pull-right text-transparent">Just Now</span><br>
+              </a> </li>
+            <li class="notification"> <a href="#"> <span class="pull-left"><span class="label label-success"><i class="icon-comment"></i></span> New Comment</span> <span class="time pull-right text-transparent">5 Minutes Ago</span><br>
+              </a> </li>
+            <li class="notification"> <a href="#"> <span class="pull-left"><span class="label label-primary"><i class="icon-user"></i></span> 12 New Users</span> <span class="time pull-right text-transparent">23 Minutes ago</span><br>
+              </a> </li>
+            <li class="notification"> <a href="#"> <span class="pull-left"><span class="label label-danger"><i class="icon-flag"></i></span> Canceled Transaction</span> <span class="time pull-right text-transparent">12 Hours Ago</span><br>
+              </a> </li>
+            <li class="notification"> <a href="#"> <span class="pull-left"><span class="label label-warning"><i class="icon-shopping-cart"></i></span> Canceled Transaction</span> <span class="time pull-right text-transparent">Yesterday</span><br>
+              </a> </li>
+            <li class="divider"></li>
+            <li class="dropdown-footer text-center"> <a href="#"> See all notifications </a> </li>
+          </ul>
+        </li>
+        <li class="dropdown alerts-dropdown"> <a href="#" class="dropdown-toggle announcements" data-toggle="dropdown"><i class="icon-bar-chart"></i><span class="badge">56</span></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header header-inverse"><i class="icon-bar-chart"></i>6 Pending Tasks </li>
+            <li> <a href="javascript:void(0);"> <span class="task"> <span class="desc">November orders </span> </span>
+              <div class="progress progress-striped active">
+                <div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"> </div>
+              </div>
+              </a> </li>
+            <li> <a href="javascript:void(0);"> <span class="task"> <span class="desc">Invoices paid</span> </span>
+              <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:65%"> </div>
+              </div>
+              </a> </li>
+            <li> <a href="javascript:void(0);"> <span class="task"> <span class="desc">Updates</span> </span>
+              <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-warning"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:35%"> </div>
+              </div>
+              </a> </li>
+            <li> <a href="javascript:void(0);"> <span class="task"> <span class="desc">Unread emails</span> </span>
+              <div class="progress progress-striped active">
+                <div class="progress-bar progress-bar-danger"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:15%"> </div>
+              </div>
+              </a> </li>
+            <li class="divider"></li>
+            <li class="dropdown-footer text-center"> <a href="#"> See all tasks </a> </li>
+          </ul>
+        </li>
+        <li class="dropdown"> </li>
+        <li class="avatar dropdown user-dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome Ryan!<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="user-profile.html"><i class="icon-user"></i> Profile</a></li>
+            <li><a href="email.html"><i class="icon-envelope"></i> Inbox</a></li>
+            <li><a href="#"><i class="icon-gear"></i> Settings</a></li>
+            <li class="divider"></li>
+            <li><a href="login.html"><i class="icon-power-off"></i> Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- / nav-collapse --> 
+  </div>
+  
+  <!-- / top Navbar --> 
+  <!-- Wrapper for content below nav bar -->
+  <div id="wrapper"> 
+    <!-- Sidebar -->
+    <div class="sidebar-back"></div>
+    <div id="sidebar-wrapper" class="stretch-full-height">
+      <ul class="sidebar-nav">
+        <li id="dashboard"> <a href="index.html" > <span class="nav-icon"><i class="icon-dashboard icon-2x"></i></span> <span class="sidebar-menu-item-text">Dashboard</span></a> </li>
+        <li class="nav-header" id="layout"> <a href="#" > <span class="nav-icon"><i class="icon-folder-open icon-2x"></i></span> <span class="sidebar-menu-item-text">Products</span> <i class="icon-chevron-down pull-right"></i> </a>
+          <ul class="nav nav-list collapse submenu" id="layouts">
+            <li><a href="processrequest.html" class="active-title">New Clinical Trial Request</a></li>
+            <li><a href="infusionrequest.html">New Infusion Request</a></li>
+            <li><a href="search.html">Search</a></li>
+          </ul>
+        </li>
+        <li class="nav-header" id="uiMenu"> <a href="#"> <span class="nav-icon"><i class="icon-tablet icon-2x"></i></span> <span class="sidebar-menu-item-text">Pending SOPs</span> <i class="icon-chevron-down pull-right"></i> </a>
+          <ul class="nav nav-list collapse submenu" id="uiMenus">
+            <li><a href="sop-2.039.html">SOP CMP 2.0.39</a> </li>
+            <li class="sub-list"><a href="sop-2.039-2.html">SOP CMP 2.039-||</a> </li>
+            <li><a href="sop-2010.html">SOP CMP 2.0.10</a></li>
+            <li class="sub-list"><a href="sop-2010-2.html">SOP CMP 2.010-||</a></li>
+            <li><a href="sop2030.html">SOP CMP 2.030</a></li>
+            <li><a href="sop5000.html">SOP CMP 5.000 </a> </li>
+            <li class="sub-list"><a href="sop5000-2.html">SOP CMP 5.000 ||</a></li>
+            <li class="sub-list"><a href="sop5000-3.html">SOP CMP 5.000 |||</a></li>
+            <li class="sub-list"><a href="sop5000-4.html">SOP CMP 5.000 |v</a></li>
+            <li class="sub-list"><a href="sop5000-5.html">SOP CMP 5.000 v</a></li>
+             <li><a href="sop5002.html">SOP CMP 5002</a></li>
+             	<li class="sub-list"><a href="sop5002-2.html">SOP CMP 5.002 ||</a></li>
+                <li class="sub-list"><a href="sop5002-3.html">SOP CMP 5.002 |||</a></li>
+            <li><a href="sop5003.html">SOP CMP 5.003</a></li>
+            <li class="sub-list"><a href="sop5003-2.html">SOP CMP 2.003-||</a></li>
+            <li class="sub-list"><a href="sop5003-3.html">SOP CMP 2.003-|||</a></li>
+          </ul>
+        </li>
+        <li class="nav-header" id="page"> <a href="#"> <span class="nav-icon"><i class="icon-copy icon-2x"></i></span> <span class="sidebar-menu-item-text">Reports</span> <i class="icon-chevron-down pull-right"></i> </a>
+          <ul class="nav nav-list collapse submenu" id="uiMenus">
+            <li><a href="report.html">Create New Report</a></li>
+            <li><a href="search-report.html">Search</a></li>
+          </ul>
+        </li>
+        <li class="nav-header" id="table"> <a href="#"> <span class="nav-icon"><i class="icon-table icon-2x"></i></span> <span class="sidebar-menu-item-text">Search</span> <i class="icon-chevron-down pull-right"></i> </a>
+          <ul class="nav nav-list collapse submenu" id="tables">
+            <li><a href="search.html">Basic</a></li>
+            <li><a href="advanced-search.html">Advanced</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /sidebar --> 
+    
+    <!-- Keep all page content within the page-content-wrapper -->
+    <div id="page-content-wrapper" class="stretch-full-height animated-med-delay fadeInRight"> 
+      <!-- page content header -->
+      <div class="row">
+        <form class="form-signin">
+          <h1 class="text-center ">ALLOGENEICDONOR PRODUCT TRACKING</h1>
+          <h2 class="text-center text-primary">PRODUCT UNIQUE ID</h2>
+          <br>
+          <table width="100%" border="0" class="hidden-background">
+            <tr>
+              <td colspan = "2"><div class="col-md-12 no-padding">
+                  <div class="panel panel-gray-solid panel-body-only animated-med-delay fadeInUp downarrowdiv">
+                    <div class="panel-heading">
+                      <div class="tools pull-right"> <a href="#" class="close-panel" data-dismiss="panel" aria-hidden="true"><i class="icon-remove text-transparent"></i></a> </div>
+                    </div>
+                    <div id="announcement" class="panel-body no-padding-top">
+                      <h2 class="text-center ">1.  DONOR INFORMATION</h2>
+                      <div class="add-arrow-down-left animated-med-delay fadeInUp"></div>
+                    </div>
+                  </div>
+                </div></td>
+            </tr>
+               <tr>
+              <td colspan="2"><label class="btn"> Name </label>
+                <label class="btn">
+                  <input type="text" class="mrg-hidden">
+                </label></td>
+            </tr>
+            
+            <tr>
+              <td><label class="btn"> Donor ID </label>
+                <label class="btn">
+                  <input type="text" class="mrg-hidden">
+                </label></td>
+              <td><label class="btn"> Hospital ID </label>
+                <label class="btn">
+                  <input type="text" class="mrg-hidden">
+                </label>
+                <label class="btn"> DOB </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden">
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td colspan = "2"><div class="col-md-12 no-padding">
+                  <div class="panel panel-gray-solid panel-body-only animated-med-delay fadeInUp downarrowdiv">
+                    <div class="panel-heading">
+                      <div class="tools pull-right"> <a href="#" class="close-panel" data-dismiss="panel" aria-hidden="true"><i class="icon-remove text-transparent"></i></a> </div>
+                    </div>
+                    <div id="announcement" class="panel-body no-padding-top">
+                      <h2 class="text-center ">2. PRODUCT COLLECTION </h2>
+                      <div class="add-arrow-down-left animated-med-delay fadeInUp"></div>
+                    </div>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <td><p>Collection facility</p></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td><p>Collection time and date
+                
+                <p></td>
+              <td><p class="col-md-6">Date:</p>
+                <p class="col-md-6">Time:</p></td>
+            </tr>
+            <tr>
+              <td><p>Transported by (write name of courier company and/or personnel if transport by non CMP staff)</p></td>
+              <td><p class="col-md-6">Picked up </p>
+                <p class="col-md-6">Delivered   (circle one)</p>
+                <p class="col-md-12">
+                  <label class="btn both-pad-hidden"> Initials (CMP Staff)</label>
+                  <label class="btn">
+                    <input type="text" class="mrg-hidden">
+                  </label>
+                </p>
+                <p class="col-md-12">
+                  <label class="btn both-pad-hidden"> Non CMP staff </label>
+                  <label class="btn">
+                    <input type="text" class="mrg-hidden">
+                  </label>
+                </p></td>
+            </tr>
+            <tr>
+              <td colspan = "2"><div class="col-md-12 no-padding">
+                  <div class="panel panel-gray-solid panel-body-only animated-med-delay fadeInUp downarrowdiv">
+                    <div class="panel-heading">
+                      <div class="tools pull-right"> <a href="#" class="close-panel" data-dismiss="panel" aria-hidden="true"><i class="icon-remove text-transparent"></i></a> </div>
+                    </div>
+                    <div id="announcement" class="panel-body no-padding-top">
+                      <h2 class="text-center ">3. PRODUCT RECEIVED </h2>
+                      <div class="add-arrow-down-left animated-med-delay fadeInUp"></div>
+                    </div>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <td><p>Product Temperature @ the time received</p>
+                <label class="btn both-pad-hidden">
+                  <input class="checkbox-inline" type="checkbox">
+                  RT 18-25°C </label>
+                <label class="btn ">
+                  <input class="checkbox-inline" type="checkbox">
+                  1-8°C </label>
+                <label class="btn ">
+                  <input class="checkbox-inline" type="checkbox">
+                  -120 to -180°C </label></td>
+              <td><label class="btn">
+                  <input type="text" class="mrg-hidden">
+                </label>
+                <label class="btn both-pad-hidden"> Acceptable </label>
+                <label class="btn">
+                  <input type="text" class="mrg-hidden">
+                </label>
+                <label class="btn both-pad-hidden"> Not acceptable</label>
+                <p class="col-md-12">
+                  <label class="btn"> Comments if not acceptable</label>
+                  <label class="btn">
+                    <input type="text" class="mrg-hidden">
+                  </label>
+                </p></td>
+            </tr>
+            <tr>
+              <td><p>Product Integrity Acceptable
+                  (Circle one)</p></td>
+              <td><p class="col-md-6">
+                  <label class="btn "> Yes</label>
+                </p>
+                <p class="col-md-6">
+                  <label class="btn "> Yes</label>
+                </p>
+                <p class="col-md-12 ">
+                  <label class="btn"> Comments if not acceptable</label>
+                  <label class="btn">
+                    <input type="text" class="mrg-hidden">
+                  </label>
+                </p></td>
+            </tr>
+            <tr>
+              <td><p>Received by </p></td>
+              <td><p class="col-md-12 ">
+                  <label class="btn"> Initials </label>
+                  <label class="btn">
+                    <input type="text" class="mrg-hidden">
+                  </label>
+                </p></td>
+            </tr>
+            <tr>
+              <td><p>Date and Time</p></td>
+              <td><p class="col-md-6 ">
+                  <label class="btn"> Date</label>
+                  
+                  <label class="btn">
+                 <input class=" mrg-hidden datetimepicker4" type="text">
+                  </label>
+                </p>
+                <p class="col-md-6 ">
+                  <label class="btn"> Time</label>
+                  <label class="btn">
+                    <input type="text" class="mrg-hidden">
+                  </label>
+                </p></td>
+            </tr>
+            
+            
+            
+            <tr>
+              <td colspan = "2"><div class="col-md-12 no-padding">
+                  <div class="panel panel-gray-solid panel-body-only animated-med-delay fadeInUp downarrowdiv">
+                    <div class="panel-heading">
+                      <div class="tools pull-right"> <a href="#" class="close-panel" data-dismiss="panel" aria-hidden="true"><i class="icon-remove text-transparent"></i></a> </div>
+                    </div>
+                    <div id="announcement" class="panel-body no-padding-top">
+                      <h2 class="text-center ">4. PRODUCT PROCESS</h2>
+                      <div class="add-arrow-down-left animated-med-delay fadeInUp"></div>
+                    </div>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <td><p>Process Started Date and Time</p>
+                
+             
+                  </td>
+              <td>
+               <p class="col-md-3">
+             <label class="btn"> Date</label>
+                  <label class="btn"> 
+                    <input class=" mrg-hidden datetimepicker4" type="text">
+                  </label>
+                  </p>
+                   <p class="col-md-3">
+                    <label class="btn"> Time</label>
+                  <label class="btn">
+                    <input type="text" class="mrg-hidden">
+                  </label>
+                  </p>
+                   <p class="col-md-3">
+                    <label class="btn"> Initials: </label>
+                 
+                  </label>
+                  
+                  
+               <label class="btn">
+                    <input type="text" class="mrg-hidden">
+                  </label>
+                </p></td>
+            </tr>
+            <tr>
+              <td><p>Process completion</p></td>
+              <td>
+              
+              <p class="col-md-12">
+                  <label class="btn "> Cryopreserved:     Storage location:</label>
+               </p>
+               
+                <p class="col-md-12 ">
+                  <label class="btn"> Section</label>
+                  <label class="btn">
+                    <input type="text" class="mrg-hidden">
+                  </label>
+                </p>
+                 <p class="col-md-12 ">
+                  <label class="btn"> Column</label>
+                  <label class="btn">
+                    <input type="text" class="mrg-hidden">
+                  </label>
+                </p>
+                 <p class="col-md-12 ">
+                  <label class="btn"> Slot</label>
+                  <label class="btn">
+                    <input type="text" class="mrg-hidden">
+                  </label>
+                </p>
+                
+                 <p class="col-md-3">
+             <label class="btn"> Fresh infusion:    Date</label>
+                  <label class="btn"> 
+                    <input type="text" class="mrg-hidden datetimepicker4">
+                  </label>
+                  </p>
+                   <p class="col-md-3">
+                    <label class="btn"> Time</label>
+                  <label class="btn">
+                    <input type="text" class="mrg-hidden">
+                  </label>
+                  </p>
+                   <p class="col-md-3">
+                    <label class="btn"> Initials: </label>
+                 
+                  </label>
+                  
+                  
+               <label class="btn">
+                    <input type="text" class="mrg-hidden">
+                  </label>
+                </p>
+                
+                </td>
+            </tr>
+           
+            
+            
+            
+             <td colspan = "2"><div class="col-md-12 no-padding">
+                  <div class="panel panel-gray-solid panel-body-only animated-med-delay fadeInUp downarrowdiv">
+                    <div class="panel-heading">
+                      <div class="tools pull-right"> <a href="#" class="close-panel" data-dismiss="panel" aria-hidden="true"><i class="icon-remove text-transparent"></i></a> </div>
+                    </div>
+                    <div id="announcement" class="panel-body no-padding-top">
+                      <h2 class="text-center ">5. PRODUCT RELEASED AND TRANSPORT</h2>
+                      <div class="add-arrow-down-left animated-med-delay fadeInUp"></div>
+                    </div>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <td colspan = "2"><h1 class="text-center">Refer to recipients infusion records for information</h1>
+                
+             
+                  </td>
+              
+            </tr>
+            
+           
+            <td colspan = "2"><div class="col-md-12 no-padding">
+                  <div class="panel panel-gray-solid panel-body-only animated-med-delay fadeInUp downarrowdiv">
+                    <div class="panel-heading">
+                      <div class="tools pull-right"> <a href="#" class="close-panel" data-dismiss="panel" aria-hidden="true"><i class="icon-remove text-transparent"></i></a> </div>
+                    </div>
+                    <div id="announcement" class="panel-body no-padding-top">
+                      <h2 class="text-center ">6. PRODUCT FINAL DISPOSITION</h2>
+                      <div class="add-arrow-down-left animated-med-delay fadeInUp"></div>
+                    </div>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+              <td>
+              
+              <p class="col-md-12"><b>Infusion #1</b></p>
+                 <div class="col-md-12 both-pad-hidden">
+             <label class="btn ">
+                  <input type="checkbox" class="checkbox-inline">
+                 N/A</label>
+                 
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+            
+                 
+                  </td>
+              <td>
+              
+               <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Recipient Name</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Randomized # </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Hospital ID</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align"> DOB</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div> 
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Infusion Date</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12 datetimepicker4">
+                </label>
+                <label class="btn col-align">Dose </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Start time</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12 datetimepicker4">
+                </label>
+                <label class="btn col-align">End time</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12 datetimepicker4">
+                </label>
+                 </div>
+                 
+                 <p class="col-md-12 top-bold-mrg">
+                 (request information from infusion coordinator)
+                 </p>
+                  <div class="col-md-12 both-pad-hidden">
+               
+                <label class="btn col-align">Initials:</label> 
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                   <div class="col-md-12 both-pad-hidden">
+               
+                <label class="btn col-align">Comment:</label> 
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                  <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Reviewed by</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Date: </label>
+                 <label class="btn">
+                  <input class=" mrg-hidden datetimepicker4 col-md-12" type="text">
+                </label>
+                 </div>
+                 
+                 </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <td colspan ="2">
+            <hr class="top-bottom-mrg">
+            </td>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             <tr>
+              <td>
+              
+              <p class="col-md-12"><b>Infusion #2</b></p>
+                 <div class="col-md-12 both-pad-hidden">
+             <label class="btn ">
+                  <input type="checkbox" class="checkbox-inline">
+                 N/A</label>
+                 
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+            
+                 
+                  </td>
+              <td>
+              
+               <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Recipient Name</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Randomized # </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Hospital ID</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align"> DOB</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div> 
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Infusion Date</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Dose </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Start time</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">End time</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                 
+                 <p class="col-md-12 top-bold-mrg">
+                 (request information from infusion coordinator)
+                 </p>
+                  <div class="col-md-12 both-pad-hidden">
+               
+                <label class="btn col-align">Initials:</label> 
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                   <div class="col-md-12 both-pad-hidden">
+               
+                <label class="btn col-align">Comment:</label> 
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                  <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Reviewed by</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Date: </label>
+                 <label class="btn">
+                  <input class=" mrg-hidden datetimepicker4 col-md-12" type="text">
+                </label>
+                 </div>
+                 
+                 </td>
+            </tr>
+            
+            
+          
+      
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+           
+            <td colspan ="2">
+            <hr class="top-bottom-mrg">
+            </td>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             <tr>
+              <td>
+              
+              <p class="col-md-12"><b>Infusion #3</b></p>
+                 <div class="col-md-12 both-pad-hidden">
+             <label class="btn ">
+                  <input type="checkbox" class="checkbox-inline">
+                 N/A</label>
+                 
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+            
+                 
+                  </td>
+              <td>
+              
+               <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Recipient Name</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Randomized # </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Hospital ID</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align"> DOB</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div> 
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Infusion Date</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Dose </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Start time</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">End time</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                 
+                 <p class="col-md-12 top-bold-mrg">
+                 (request information from infusion coordinator)
+                 </p>
+                  <div class="col-md-12 both-pad-hidden">
+               
+                <label class="btn col-align">Initials:</label> 
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                   <div class="col-md-12 both-pad-hidden">
+               
+                <label class="btn col-align">Comment:</label> 
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                  <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Reviewed by</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Date: </label>
+                 <label class="btn">
+               <input class=" mrg-hidden datetimepicker4 col-md-12" type="text">
+                </label>
+                 </div>
+                 
+                 </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             
+            <td colspan ="2">
+            <hr class="top-bottom-mrg">
+            </td>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             <tr>
+              <td>
+              
+              <p class="col-md-12"><b>Infusion #4</b></p>
+                 <div class="col-md-12 both-pad-hidden">
+             <label class="btn ">
+                  <input type="checkbox" class="checkbox-inline">
+                 N/A</label>
+                 
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+            
+                 
+                  </td>
+              <td>
+              
+               <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Recipient Name</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Randomized # </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Hospital ID</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align"> DOB</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div> 
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Infusion Date</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Dose </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Start time</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">End time</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                 
+                 <p class="col-md-12 top-bold-mrg">
+                 (request information from infusion coordinator)
+                 </p>
+                  <div class="col-md-12 both-pad-hidden">
+               
+                <label class="btn col-align">Initials:</label> 
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                   <div class="col-md-12 both-pad-hidden">
+               
+                <label class="btn col-align">Comment:</label> 
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                  <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Reviewed by</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Date: </label>
+                 <label class="btn">
+                 <input class=" mrg-hidden datetimepicker4 col-md-12" type="text">
+                </label>
+                 </div>
+                 
+                 </td>
+            </tr>
+            
+            
+          
+            <td colspan ="2">
+            <hr class="top-bottom-mrg">
+            </td>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             <tr>
+              <td>
+              
+              <p class="col-md-12"><b>Infusion #5</b></p>
+                 <div class="col-md-12 both-pad-hidden">
+             <label class="btn ">
+                  <input type="checkbox" class="checkbox-inline">
+                 N/A</label>
+                 
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+            
+                 
+                  </td>
+              <td>
+              
+               <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Recipient Name</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Randomized # </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Hospital ID</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align"> DOB</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div> 
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Infusion Date</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Dose </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Start time</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">End time</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                 
+                 <p class="col-md-12 top-bold-mrg">
+                 (request information from infusion coordinator)
+                 </p>
+                  <div class="col-md-12 both-pad-hidden">
+               
+                <label class="btn col-align">Initials:</label> 
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                   <div class="col-md-12 both-pad-hidden">
+               
+                <label class="btn col-align">Comment:</label> 
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                  <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Reviewed by</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Date: </label>
+                 <label class="btn">
+                  <input class=" mrg-hidden datetimepicker4 col-md-12" type="text">
+                </label>
+                 </div>
+                 
+                 </td>
+            </tr>
+            
+            
+         
+            <td colspan ="2">
+            <hr class="top-bottom-mrg">
+            </td>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             <tr>
+              <td>
+              
+              <p class="col-md-12"><b>Infusion #6</b></p>
+                 <div class="col-md-12 both-pad-hidden">
+             <label class="btn ">
+                  <input type="checkbox" class="checkbox-inline">
+                 N/A</label>
+                 
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+            
+                 
+                  </td>
+              <td>
+              
+               <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Recipient Name</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Randomized # </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Hospital ID</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align"> DOB</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div> 
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Infusion Date</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Dose </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Start time</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">End time</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                 
+                 <p class="col-md-12 top-bold-mrg">
+                 (request information from infusion coordinator)
+                 </p>
+                  <div class="col-md-12 both-pad-hidden">
+               
+                <label class="btn col-align">Initials:</label> 
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                   <div class="col-md-12 both-pad-hidden">
+               
+                <label class="btn col-align">Comment:</label> 
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                  <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Reviewed by</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Date: </label>
+                 <label class="btn">
+                 <input class=" mrg-hidden datetimepicker4 col-md-12" type="text">
+                </label>
+                 </div>
+                 
+                 </td>
+            </tr>
+            
+            
+        
+       
+            <td colspan ="2">
+            <hr class="top-bottom-mrg">
+            </td>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             <tr>
+              <td>
+              
+              <p class="col-md-12"><b>Infusion #7</b></p>
+                 <div class="col-md-12 both-pad-hidden">
+             <label class="btn ">
+                  <input type="checkbox" class="checkbox-inline">
+                 N/A</label>
+                 
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn"> Bag #</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                <label class="btn">of </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  xs-input">
+                </label>
+                 </div>
+            
+                 
+                  </td>
+              <td>
+              
+               
+                <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Hospital ID</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align"> DOB</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div> 
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Infusion Date</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Dose </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                 <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Start time</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">End time</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                 
+                 <p class="col-md-12 top-bold-mrg">
+                 (request information from infusion coordinator)
+                 </p>
+                  <div class="col-md-12 both-pad-hidden">
+               
+                <label class="btn col-align">Initials:</label> 
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                   <div class="col-md-12 both-pad-hidden">
+               
+                <label class="btn col-align">Comment:</label> 
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                  <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Reviewed by</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Date: </label>
+                 <label class="btn">
+                 <input class=" mrg-hidden datetimepicker4 col-md-12" type="text">
+                </label>
+                 </div>
+                 
+                 </td>
+            </tr>
+            
+        
+      <tr>
+      
+<tr>
+<td colspan ="2">
+            <hr class="top-bottom-mrg">
+ </td>
+            
+</tr>
+      
+<td colspan="2">
+<h1 class="text-center"><b>DISCARD</b></h1>
+
+<h1 class="text-center">
+(if applicable follow instruction on SOP CMP 2.011)
+</h1>
+</h1>
+</td>
+</tr>
+
+
+
+
+
+
+
+<tr>
+
+
+<td colspan="2">
+              
+               <div class="col-md-12 both-pad-hidden">
+               
+                <label class="btn col-align">Reason:</label> 
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                  <div class="col-md-12 both-pad-hidden">
+               
+                <label class="btn col-align">Comments:</label> 
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                 
+                 <p class="col-md-12 top-bold-mrg">
+                 Product discard form completed and approved (attach a copy): 
+                 </p>
+                  
+                   
+                  <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Initials</label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Reviewed by: </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden col-md-12">
+                </label>
+                 </div>
+                 
+                 
+                 
+                 
+                  <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Final Reviewed by: </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Date: </label>
+                 <label class="btn">
+              <input class=" mrg-hidden datetimepicker4 col-md-12" type="text">
+                </label>
+                 </div>
+                 </td>
+            </tr>
+            
+            <td colspan ="2">
+            <hr class="top-bottom-mrg">
+ </td>
+            
+</tr>
+
+
+
+
+
+
+
+
+
+<tr>  <td colspan ="2"> <div class="col-md-12 both-pad-hidden">
+                 <label class="btn col-align">Final Reviewed by: </label>
+                 <label class="btn">
+                  <input type="text" class="mrg-hidden  col-md-12">
+                </label>
+                <label class="btn col-align">Date: </label>
+                 <label class="btn">
+                <input class=" mrg-hidden datetimepicker4 col-md-12" type="text">
+                </label>
+                 </div></td></tr>
+          </table>
+      
+        </form>
+        <div class="clearfix"></div>
+      </div>  
+    </div>
+    <!-- /page-content-wrapper --> 
+    
+  </div>
+  <!-- / wrapper for content below nav bar --> 
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script> 
+<!--<script src="assets/js/jquery.js"></script> --> 
+
+<script src="assets/js/moment-c.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.42/js/bootstrap-datetimepicker.min.js"></script> 
+<script type="text/javascript">
+            $(function () {
+                $('.datetimepicker4').datetimepicker();
+            });
+        </script> 
+<script src="assets/js/chat.js"></script> 
+<script src="assets/js/modernizr-2.6.2.min.js"></script> 
+<script src="dist/js/bootstrap.js"></script> 
+<script type="text/javascript" src="assets/js/jquery-ui-1.10.4.custom.min.js"></script> 
+
+<!-- Pushy JS --> 
+<script src="assets/js/pushy.js"></script> 
+
+<!-- Zabuto Calendar --> 
+<script src="assets/plugins/calendar/zabuto_calendar.js"></script> 
+<script type="application/javascript">
+            $(document).ready(function () {
+            $("#date-popover").popover({html: true, trigger: "manual"});
+            $("#date-popover").hide();
+            $("#date-popover").click(function (e) {
+            $(this).hide();
+            });
+
+            $("#my-calendar").zabuto_calendar({
+            action: function () {
+            return myDateFunction(this.id, false);
+            },
+            action_nav: function () {
+            return myNavFunction(this.id);
+            },
+            ajax: {
+            url: "show_data.php?action=1",
+            modal: true
+            },
+            legend: [
+            {type: "text", label: "Special event", badge: "00"},
+            {type: "block", label: "Regular event", }
+            ]
+            });
+            });
+
+            function myDateFunction(id, fromModal) {
+            $("#date-popover").hide();
+            if (fromModal) {
+            $("#" + id + "_modal").modal("hide");
+            }
+            var date = $("#" + id).data("date");
+            var hasEvent = $("#" + id).data("hasEvent");
+            if (hasEvent && !fromModal) {
+            return false;
+            }
+            $("#date-popover-content").html('You clicked on date ' + date);
+            $("#date-popover").show();
+            return true;
+            }
+
+            function myNavFunction(id) {
+            $("#date-popover").hide();
+            var nav = $("#" + id).data("navigation");
+            var to = $("#" + id).data("to");
+            console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
+            }
+        </script> 
+<!-- Sparkline --> 
+<script src="assets/js/jquery.sparkline.js"></script> 
+
+<!-- EzMark --> 
+<script src="assets/js/jquery.ezmark.js"></script> 
+<script src="assets/select/select2.js"></script> 
+<script type="text/javascript">
+$(function() {
+    $('.custom-check input').ezMark()
+});
+        </script> 
+
+<!-- Canvas.js--> 
+<script src="assets/plugins/canvas/canvasjs.min.js"></script> 
+<!-- ColorPicker --> 
+<script type="text/javascript" src="colorPicker/colpick/js/colpick.js"></script> 
+<script type="text/javascript" src="colorPicker/colpick/js/colpick-implem.js"></script> 
+
+<!-- Custom --> 
+<script src="assets/js/sidebar-navbar.js"></script> 
+<script src="assets/js/script.js"></script> 
+<script src="assets/js/chart-data.js"></script> 
+
+<!-- Google Maps --> 
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+<script type="text/javascript" src="assets/js/gmap3.js"></script> 
+<script src="assets/js/gmap.custom-index-map.js"></script> 
+
+<!-- Font Awesome Markers --> 
+<script src="assets/plugins/fontawesome-markers-master/fontawesome-markers.js"></script> 
+
+<!-- Easy Pie Charts --> 
+<script type="text/javascript" src="assets/plugins/jquery-easy-pie-chart/examples/excanvas.js"></script> 
+<script type="text/javascript" src="assets/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script> 
+
+<!-- Initialize Carousel--> 
+<script>$('.carousel').carousel({
+    interval: 7000
+})
+        </script> 
+<!-- Flot --> 
+<script type="text/javascript" src="assets/plugins/flot/jquery.flot.js"></script> 
+<script type="text/javascript" src="assets/plugins/flot/jquery.flot.resize.js"></script>
+</body>
+</html>
